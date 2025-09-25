@@ -132,7 +132,7 @@ function loadSampleProjects() {
                 whyInteresting: '<strong>Why it\'s interesting:</strong> FlowNet changes the way people can understand and interact with computational fluid dynamics. I don\'t want this field to be exclusive to college level courses and phd candidates. I want anyone interested in physics to be able to experiment with CFD simulations. For example, a high schooler designing a project for school, or an amateur rocket builder would be able to easily simulate the aerodynamics of their design in real time with little resistance.',
                 category: 'cfd',
                 technologies: 'C++, OpenFOAM, Docker, JavaScript, Three.js',
-                previewImage: 'flowNet/flowNetThumbNail.png',
+                previewImage: 'flowNet/flowNetThumbnail.png',
                 mediaUrl: ['flowNet/flowNetImage.png', 'flowNet/flowNetVideo.mp4'],
                 mediaType: 'custom',
                 layoutType: 'flownet-horizontal-media',
