@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pryce Hundley | Mechanical Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Pryce Hundley | Mechanical Engineer</h2>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#resume" class="nav-link">Resume</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <!-- Background Video -->
+            <video class="hero-background-video" autoplay muted loop playsinline>
+                <source src="nozzleProject/normalP0.mp4" type="video/mp4">
+            </video>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title"> Howdy, I'm Pryce Hundley</h1>
+                    <p class="hero-subtitle">I'm a <strong>mechanical engineer</strong> interested in the intersection of <strong>mechanical systems design</strong>, <strong>software simulation</strong>, and <strong>applied mathematics</strong>.</p>
+                    <p class="hero-subtitle">I have a passion for many applications of mechanical systems simulation from <strong>aerospace</strong> to <strong>semicondunctors!</strong></p>
+                    <p class="hero-subtitle">I'm currently a <strong>mechanical engineer</strong> at the Federal Aviation Administration. I'm also currently developing the web based <strong>computational fluid dynamics</strong> platform 'FlowNet'</strong> targetted at students and CFD hobbiests.</p>
+                    <div class="hero-links">
+                        <a href="mailto:hundleypryce@gmail.com" class="hero-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>hundleypryce@gmail.com</span>
+                        </a>
+                        <a href="tel:512-569-1804" class="hero-link">
+                            <i class="fas fa-phone"></i>
+                            <span>512-569-1804</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/pryce-r-hundley/" class="hero-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/prycegood" class="hero-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-secondary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                        <a href="misc/pryce'sresume.pdf" target="_blank" class="btn btn-secondary">Check out my resume</a>
+                    </div>
+                </div>
+                <div class="hero-tree">
+                    <img src="misc/selfie.png" alt="Pryce Hundley" class="tree-image">
+                    <p class="image-caption">Visiting Starbase, Texas</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="misc/tree.png" alt="Tree" class="about-photo">
+                        <p class="about-image-caption">Austin, Texas</p>
+                        <img src="misc/thumbsUp.png" alt="Thumbs Up" class="thumbs-up-image">
+                        <p class="about-image-caption">Big Bend National Park</p>
+                    </div>
+                    <div class="about-text">
+                        <h3 class="about-section-header">Background</h3>
+                        <p class="about-description">
+                            My love for mechanical engineering stems from an interest in math and computer science. 
+                            When I saw how computation and mathematics can be leveraged to analyze physical systems, I was blown away by how powerful these tools can be. Despite it becoming more widespread,
+                            I believe that field of mechanical systems simulation is still extremely underripe (especially in the dawn of AI).
+                         </p>   
+                        
+                        <h3 class="about-section-header">Education</h3>
+                        <p class="about-description"> I obtained a B.S. in Interdisciplinary Engineering from Texas A&M University where I studied the fields of mechanical engineering, computer science, and mathematics in parallel.
+                             My expertise in advanced mathematics (partial differential equations, differential geometry, etc.) and experience implementing numerical methods in software gives me a unique advantage in understanding the underlying mechanics behind the scenes of a complex system.
+                        </p>
+                        
+                        <h3 class="about-section-header">Federal Aviation Administration</h3>
+                        <p class="about-description"> As a current mechanical engineer at the Federal Aviation Administration, I am responsible for the design and implementation
+                            of mechanical systems analysis and integrations. I work with CAD software to design and analyze physical systems that support
+                            the National Airspace System.
+                       </p>
+                       
+                       <h3 class="about-section-header">FlowNet</h3>
+                       <p class="about-description"> I am also developing the website 'FlowNet'. This is a platform that started as a side project, but I quickly
+                        realized it had the potential to be a valuable tool for those interested in computational fluid dynamics. I developed
+                        an original incompressible flow solver in C++ that is lightweight and fast enough to run in the browser. My implementation discretizes the Navier-Stokes equations by transforming them into a variational form, and then by using the Galerkin method to project them into a discrete space. I am currenly implementing OpenFOAM integrations
+                        so that users can choose to create more robust and computationally heavy simulations.
+                       </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-list" id="projectsGrid">
+                    <!-- Projects will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume">
+            <div class="container">
+                <h2 class="section-title">Resume</h2>
+                <div class="resume-content">
+                    <div class="resume-actions">
+                        <a href="misc/pryce'sresume.pdf" target="_blank" class="btn btn-primary resume-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Open Resume in New Tab
+                        </a>
+                    </div>
+                    <div class="resume-preview">
+                        <iframe src="misc/pryce'sresume.pdf" class="resume-frame" title="Pryce Hundley Resume"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p>Interested in collaboration or have a project in mind? I'd love to hear from you.</p>
+                        <div class="contact-links">
+                            <a href="mailto:hundleypryce@gmail.com" class="contact-link">
+                                <i class="fas fa-envelope"></i>
+                                <span>hundleypryce@gmail.com</span>
+                            </a>
+                            <a href="tel:512-569-1804" class="contact-link">
+                                <i class="fas fa-phone"></i>
+                                <span>512-569-1804</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/pryce-r-hundley/" class="contact-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn Profile</span>
+                            </a>
+                            <a href="https://github.com/prycegood" class="contact-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub Profile</span>
+                            </a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Project</h2>
+            <form id="projectForm">
+                <div class="form-group">
+                    <label for="projectTitle">Project Title</label>
+                    <input type="text" id="projectTitle" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="projectDescription">Description</label>
+                    <textarea id="projectDescription" name="description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="projectCategory">Category</label>
+                    <select id="projectCategory" name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="cfd">CFD Analysis</option>
+                        <option value="simulation">Mechanical Simulation</option>
+                        <option value="programming">Scientific Programming</option>
+                        <option value="mathematics">Applied Mathematics</option>
+                        <option value="analysis">Engineering Analysis</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="projectImage">Upload Image</label>
+                    <input type="file" id="projectImage" name="image" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="projectTechnologies">Technologies Used</label>
+                    <input type="text" id="projectTechnologies" name="technologies" placeholder="e.g., ANSYS, Python, MATLAB">
+                </div>
+                <div class="form-buttons">
+                    <button type="button" class="btn btn-secondary" id="cancelProject">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Project</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Pryce Hundley. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
