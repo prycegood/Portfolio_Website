@@ -13,9 +13,9 @@ let projects = [];
 // Initialize the website
 document.addEventListener('DOMContentLoaded', function() {
     initializeProjects();
+    loadSampleProjects();
     setupEventListeners();
     setupSmoothScrolling();
-    loadSampleProjects();
     setupBackgroundVideo();
 });
 
@@ -92,9 +92,6 @@ function setupBackgroundVideo() {
 
 // Initialize projects from localStorage
 function initializeProjects() {
-    // Temporarily force reload projects (remove this line after first load)
-    localStorage.removeItem('portfolioProjects');
-    
     const savedProjects = localStorage.getItem('portfolioProjects');
     if (savedProjects) {
         projects = JSON.parse(savedProjects);
@@ -199,7 +196,7 @@ function loadSampleProjects() {
                 isSample: true
             }
         ];
-        g
+        
         projects = sampleProjects;
         saveProjects();
         renderProjects();
@@ -238,8 +235,6 @@ function renderProjects() {
         const projectItem = createProjectItem(project);
         projectsGrid.appendChild(projectItem);
     });
-    
-    // Main page uses simplified cards - no video speed adjustment needed
 }
 
 // Create project item element (simplified for main page)
