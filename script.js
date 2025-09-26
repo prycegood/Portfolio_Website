@@ -369,25 +369,7 @@ const notificationStyles = `
     
 
     
-    @media (max-width: 768px) {
-        .nav-links {
-            position: fixed;
-            top: 70px;
-            left: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            flex-direction: column;
-            padding: 2rem;
-            transform: translateY(-100%);
-            transition: transform 0.3s ease;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .nav-links.active {
-            transform: translateY(0);
-        }
-        
+    @media (max-width: 768px) {        
         .hamburger.active span:nth-child(1) {
             transform: rotate(-45deg) translate(-5px, 6px);
         }

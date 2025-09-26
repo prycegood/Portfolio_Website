@@ -1771,47 +1771,104 @@ section {
 
     .nav-links {
         display: none;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 2rem;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        border-bottom: 1px solid var(--border-color);
+        z-index: 999;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        transform: translateY(0);
     }
 
-    .hero-title {
-        font-size: 2.5rem;
+    /* Fix header to be fully visible on mobile */
+    .nav-container {
+        padding: 0 1rem;
+        max-width: 100%;
+    }
+    
+    .nav-logo {
+        margin-left: 0;
+        flex: 1;
+    }
+    
+    .nav-logo h2 {
+        font-size: 1.2rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
-    .hero-subtitle {
-        font-size: 1.125rem;
-    }
-
-    .hero-links {
-        gap: 1.5rem;
-        margin-bottom: 2rem;
+    /* Mobile hero section - zoom out for better text visibility */
+    .hero {
+        min-height: 100vh;
+        padding: 1rem 0;
     }
     
     .hero-container {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.5rem;
         text-align: center;
+        padding: 0 1rem;
+        max-width: 100%;
     }
     
     .hero-content {
         text-align: center;
+        max-width: 100%;
     }
-    
-    .hero-tree {
-        flex: 0 0 300px;
+
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.1;
+        margin-bottom: 1rem;
     }
-    
-    .tree-image {
-        max-width: 300px;
+
+    .hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+        max-width: 100%;
     }
-    
+
     .hero-links {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .hero-link {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         color: #ffffff;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        min-width: fit-content;
+    }
+    
+    .hero-tree {
+        flex: 0 0 250px;
+        order: -1;
+    }
+    
+    .tree-image {
+        max-width: 250px;
+        margin-left: 0;
+    }
+    
+    .image-caption {
+        margin-left: 0;
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
     }
 
     .about-content {
@@ -1823,6 +1880,28 @@ section {
     .about-image {
         flex: none;
         order: -1;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .about-photo,
+    .thumbs-up-image {
+        max-width: 280px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .thumbs-up-image {
+        margin-top: 1rem;
+    }
+    
+    .about-image-caption {
+        text-align: center;
+        max-width: 280px;
+        margin: 0.5rem auto 1rem auto;
     }
     
     .about-text {
