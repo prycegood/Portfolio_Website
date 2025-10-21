@@ -997,7 +997,8 @@ section {
     height: 350px;
     border-radius: 0.5rem;
     box-shadow: var(--shadow-md);
-    object-fit: cover;
+    object-fit: contain;
+    background-color: #000000;
 }
 
 /* Video analysis paragraphs */
@@ -1333,7 +1334,8 @@ section {
     width: 100%;
     max-width: 800px;
     height: 450px;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: #000000;
 }
 
 /* Heat Island Surfaces Styles */
@@ -2122,9 +2124,13 @@ section {
         max-width: 450px;
     }
     
-    .flownet-horizontal-image,
+    .flownet-horizontal-image {
+        height: 280px;
+    }
+    
     .flownet-horizontal-video {
         height: 280px;
+        object-fit: contain;
     }
 
     .excel-download-section {
@@ -2208,6 +2214,7 @@ section {
 
     .flownet-video {
         height: 300px;
+        object-fit: contain;
     }
 
     .heat-island-content {
