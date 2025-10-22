@@ -461,8 +461,9 @@ section {
 
 .projects-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 2rem;
+    justify-content: center;
 }
 
 /* Simplified Project Cards */
@@ -477,11 +478,18 @@ section {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
+    max-width: 450px;
 }
 
 .project-card-simple:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
+}
+
+/* Center the 7th project card (Cable Barrier) when it's alone on its row */
+.project-card-simple:nth-child(7):last-child {
+    grid-column: 2;
 }
 
 .project-preview-image {
@@ -502,6 +510,10 @@ section {
 
 .project-preview-image.cable-barrier-thumbnail {
     margin-left: 1rem;
+}
+
+.project-preview-image.rocket-thumbnail {
+    object-position: center 70%;
 }
 
 .project-preview-placeholder {
@@ -940,14 +952,18 @@ section {
 }
 
 .large-supplementary-image {
-    flex: 0 0 180px;
+    flex: 0 0 350px;
     margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 500px;
 }
 
 .large-combo-image {
     width: 100%;
     height: auto;
-    max-height: 350px;
+    max-height: 230px;
     object-fit: contain;
     border-radius: 0.5rem;
     box-shadow: var(--shadow-lg);
@@ -1016,6 +1032,50 @@ section {
     color: var(--text-secondary);
     text-align: left;
     margin: 0;
+}
+
+.performance-table {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.performance-table h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.performance-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.performance-table thead th {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.performance-table tbody td {
+    padding: 0.75rem;
+    color: var(--text-secondary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.performance-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.performance-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02);
 }
 
 /* Custom Gallery Project Styles */
@@ -2094,11 +2154,12 @@ section {
     
     .large-supplementary-image {
         margin-top: 0;
-        max-width: 300px;
+        max-width: 400px;
+        max-height: 320px;
     }
     
     .large-combo-image {
-        max-height: 250px;
+        max-height: 150px;
     }
 
     /* Mobile video analysis styles */
@@ -2110,6 +2171,24 @@ section {
     .video-analysis p {
         font-size: 0.95rem;
         line-height: 1.6;
+    }
+    
+    .performance-table {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .performance-table h5 {
+        font-size: 1rem;
+    }
+    
+    .performance-table table {
+        font-size: 0.85rem;
+    }
+    
+    .performance-table thead th,
+    .performance-table tbody td {
+        padding: 0.5rem;
     }
 
     /* Mobile FlowNet horizontal styles */

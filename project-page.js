@@ -31,7 +31,23 @@ function renderProjectDetails(project) {
     // Create media section based on project type
     let mediaSection = '';
     
-    if (project.layoutType === 'nozzle-horizontal-videos' && Array.isArray(project.mediaUrl)) {
+    if (project.layoutType === 'rocket-launch-videos' && Array.isArray(project.mediaUrl)) {
+        // Rocket launch videos - normal playback speed, no pressure labels
+        mediaSection = `
+            <div class="nozzle-horizontal-container">
+                <div class="horizontal-videos-row">
+                    ${project.mediaUrl.map((videoUrl, index) => `
+                        <div class="horizontal-video-item">
+                            <video class="horizontal-video" autoplay muted loop playsinline controls>
+                                <source src="${videoUrl}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+    } else if (project.layoutType === 'nozzle-horizontal-videos' && Array.isArray(project.mediaUrl)) {
         // Define chamber pressure values for nozzle simulation
         const chamberPressures = ['9.72 MPa', '15 MPa', '3 MPa'];
         
@@ -169,7 +185,7 @@ function renderProjectDetails(project) {
     }
     
     // Determine if this is a project with horizontal media layout
-        const isHorizontalLayout = project.layoutType === 'nozzle-horizontal-videos' || project.layoutType === 'flownet-horizontal-media';
+        const isHorizontalLayout = project.layoutType === 'nozzle-horizontal-videos' || project.layoutType === 'flownet-horizontal-media' || project.layoutType === 'rocket-launch-videos';
         const isCenteredLayout = project.id === 'cable-barrier-detection';
     
     projectContent.innerHTML = `
