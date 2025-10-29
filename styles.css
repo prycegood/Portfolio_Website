@@ -978,17 +978,18 @@ section {
 
 .flownet-horizontal-row {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: nowrap;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 0 3rem;
 }
 
 .flownet-media-item {
     flex: 0 0 auto;
-    width: 500px;
+    width: 350px;
     text-align: center;
 }
 
@@ -1006,6 +1007,14 @@ section {
     border-radius: 0.5rem;
     box-shadow: var(--shadow-md);
     object-fit: cover;
+}
+
+.code-image-horizontal {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-md);
+    object-fit: contain;
 }
 
 .flownet-horizontal-video {
@@ -2196,15 +2205,20 @@ section {
         flex-direction: column;
         gap: 1.5rem;
         align-items: center;
+        padding: 0 1rem;
     }
     
     .flownet-media-item {
-        width: 90%;
-        max-width: 450px;
+        width: 85%;
+        max-width: 350px;
     }
     
     .flownet-horizontal-image {
         height: 280px;
+    }
+    
+    .code-image-horizontal {
+        height: auto;
     }
     
     .flownet-horizontal-video {
