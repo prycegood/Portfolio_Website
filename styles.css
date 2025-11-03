@@ -1997,19 +1997,23 @@ section {
 
     /* Mobile featured projects section fixes */
     .projects-list {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 1.5rem;
         padding: 0;
+        width: 100%;
     }
     
     .project-card-simple {
+        width: 100%;
         max-width: 100%;
         height: auto;
         min-height: auto;
+        margin: 0 auto;
     }
     
     .project-preview-image {
-        height: 180px;
+        height: 160px;
     }
     
     .project-card-content {
@@ -2017,14 +2021,19 @@ section {
     }
     
     .project-card-title {
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin-bottom: 0.5rem;
     }
     
     .project-card-description {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         margin-bottom: 1rem;
-        line-height: 1.5;
+        line-height: 1.4;
+    }
+    
+    .view-project-btn {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
     }
 
     .hero-buttons {
