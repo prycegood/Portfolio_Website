@@ -1870,13 +1870,15 @@ section {
     .nav-logo {
         margin-left: 0;
         flex: 1;
+        max-width: calc(100% - 60px); /* Leave space for hamburger */
     }
     
     .nav-logo h2 {
-        font-size: 1rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        font-size: 0.7rem;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+        line-height: 1.2;
     }
 
     /* Mobile hero section - zoom out for better text visibility */
@@ -1991,6 +1993,38 @@ section {
     
     .about-description {
         text-align: center;
+    }
+
+    /* Mobile featured projects section fixes */
+    .projects-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0;
+    }
+    
+    .project-card-simple {
+        max-width: 100%;
+        height: auto;
+        min-height: auto;
+    }
+    
+    .project-preview-image {
+        height: 180px;
+    }
+    
+    .project-card-content {
+        padding: 1rem;
+    }
+    
+    .project-card-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .project-card-description {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        line-height: 1.5;
     }
 
     .hero-buttons {
